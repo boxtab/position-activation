@@ -12,14 +12,11 @@ public class Main
     {
         while ( true )
         {
-            try
-            {
+            try {
                 App app = new App();
                 app.start();
                 break;
-            }
-            catch ( Exception e )
-            {
+            } catch ( Exception e ) {
                 Log.write( "Startup failure: " + e.getMessage() );
                 backoff.increaseAttempt();
                 backoff.sleep();
